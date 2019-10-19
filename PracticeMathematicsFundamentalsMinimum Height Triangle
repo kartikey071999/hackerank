@@ -1,0 +1,18 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    int a,b;
+    cin>>a>>b;
+    if(b%a)
+    cout<<((2*b)/a)+1;
+    else
+    cout<<((2*b)/a);
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */   
+    return 0;
+}
