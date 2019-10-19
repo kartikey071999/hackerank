@@ -1,0 +1,38 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int p (int a)
+{
+    int s =0;
+    while(a)
+    {
+        s += a%10;
+        a = a/10;
+    }
+    return s;
+}
+
+int main()
+{
+    int n,i,m,s;
+    cin >> n;
+    s = p(n);
+    m = n;
+    for(i = 1;i<=n/2;i++)
+    {
+        if(!(n%i))
+        {
+            if(p(i)>s)
+            {
+                s = p(i);
+                m = i;
+            }
+            if(p(i) == s)
+                if(m>i)
+                m =  i;
+        }
+    }
+    cout<<m;
+    return 0;
+}
